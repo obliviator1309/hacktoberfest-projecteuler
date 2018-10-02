@@ -1,0 +1,19 @@
+This is a python 3 solution.
+
+import sys
+i = int(input().strip())
+for a in range(i):
+    n,k = input().strip().split(' ')
+    n,k = [int(n),int(k)]
+    num = input().strip()
+    l=[]
+    r=1
+    ln=[]
+    for i in range (len(num)-k+1):
+        l=num[i:i+k]
+        r=1
+        for j in range (len(l)):
+            r=r*int(l[j])
+        ln.append(r)
+    ln.sort()
+    print(ln[-1])
